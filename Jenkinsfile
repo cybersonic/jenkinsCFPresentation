@@ -36,6 +36,14 @@ pipeline {
               def jsonError = readJSON file: 'cflint-results.json'
               assert jsonError['errorExists'] == false
             }
+
+          }
+        }
+        stage('selenium Test') {
+          steps {
+            sh '''ls
+'''
+            sleep 10
           }
         }
       }
